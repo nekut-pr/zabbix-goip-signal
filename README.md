@@ -6,9 +6,9 @@
 > perl -MCPAN -e 'install HTML::Parser'
 
 Этой ссылкой вы указываете куда будет сохраняться html код строницы Status->Summary с GoIP
- ```perl my $file_curle = "/usr/scripts/go-ip/curl.html";```
- 
- 
+ ```perl 
+ my $file_curle = "/usr/scripts/go-ip/curl.html";
+ ```
  Этой ссылкой вы указываете куда сохранять уровень сигнала с формат txt
  ```perl 
  my $file_output = "/usr/scripts/go-ip/output.txt"; 
