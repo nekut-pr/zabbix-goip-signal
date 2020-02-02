@@ -11,7 +11,7 @@ perl -MCPAN -e 'install HTML::Parser'
 system("curl -s -u admin:admin 'http://ip_address_go-ip/default/en_US/status.html' | grep l1_gsm_signal >> $file_curle");
 
 ```
-Этой ссылкой вы указываете куда будет сохраняться html код строницы **Status->Summary** с GoIP
+Этой ссылкой вы указываете куда будет сохраняться html код строницы `Status->Summary` с GoIP
 ```perl 
 my $file_curle = "/usr/scripts/go-ip/curl.html";
 ```
@@ -22,19 +22,19 @@ my $file_output = "/usr/scripts/go-ip/output.txt";
 ____
 Запуск файла
 -----------
-Открываем файл в crontab на дерактирование 
+#### Открываем файл в crontab на дерактирование 
 ```
 nano /etc/crontab
 ```
-Вставляем в конец файла *(запуск скрипта каждые 5 минут)*
+#### Вставляем в конец файла *(запуск скрипта каждые 5 минут)*
 ```
 */5 *    * * *   root    perl /usr/scripts/go-ip/go-ip.pl
 ```
-Перегружаем cron
+#### Перегружаем cron
 ```
 /etc/init.d/cron restart 
 ```
-Проверка
+#### Проверка
 ```
 perl /usr/scripts/go-ip/go-ip.pl
 cat /usr/scripts/go-ip/output.txt
@@ -50,11 +50,11 @@ Zabbix
 #### Вводим:
 ```UserParameter=signal,cat /usr/scripts/go-ip/output.txt```
 
-### Перегружаем Zabbix агента
+#### Перегружаем Zabbix агента
 
 ```/etc/init.d/zabbix-agent restart```
 
-### Переходим в zabbix
+#### Переходим в zabbix
 
 `Настройка -> Узлы сети -> Zabbix Server -> Элементы данных -> Создать элемент данных`
 
