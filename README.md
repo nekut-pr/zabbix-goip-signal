@@ -70,5 +70,5 @@ Zabbix
 #### Инстукцию по созданию графиков вы можете посмотреть тут:
 https://www.zabbix.com/documentation/3.0/ru/manual/config/visualisation/graphs/custom
 
-#### И вот ваш мониторинг уровня сигнала готов)
+#### И вот ваш мониторинг уровня сигнала готов:
 ![Alt-текст](https://i.ibb.co/gghZ51Q/zabbix.png)
