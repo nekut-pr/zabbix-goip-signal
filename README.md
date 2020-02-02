@@ -43,24 +43,20 @@ ____
 Zabbix
 -----------
 
-создаем файл
+#### Создаем файл:
 ```
 /etc/zabbix/zabbix_agentd.d/userparameter_asterisk.conf
 ```
-#### вводим
-
+#### Вводим:
 ```UserParameter=signal,cat /usr/scripts/go-ip/output.txt```
-#### выходим
 
 ### Перегружаем Zabbix агента
 
 ```/etc/init.d/zabbix-agent restart```
 
-
 ### Переходим в zabbix
 
-Настройки->Узлы сети->Zabbix Server
-Элементы данных->Создать элемент данных
+`Настройки->Узлы сети->Zabbix Server->Элементы данных->Создать элемент данных`
 
 
 | Данные | Значения |
@@ -71,15 +67,8 @@ Zabbix
 | Единица измерения | dB |
 | Интервал обновления | 5m |
 
-Имя Уровень сигнала 
-
-Тип Zabbix агент
-Ключ signal.mts
-
-
-
-Инстукцию по созданию графиков вы можете посмотреть тут
+Инстукцию по созданию графиков вы можете посмотреть тут:
 https://www.zabbix.com/documentation/3.0/ru/manual/config/visualisation/graphs/custom
 
-И вот ваш мониторинг уровня сигнала готов
+И вот ваш мониторинг уровня сигнала готов)
 ![Alt-текст](https://i.ibb.co/gghZ51Q/zabbix.png)
