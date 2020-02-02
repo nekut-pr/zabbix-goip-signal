@@ -9,16 +9,14 @@ my $file_output = "/usr/scripts/go-ip/output.txt";
 
 system("curl -s -u admin:admin 'http://ip_address_go-ip/default/en_US/status.html' | grep l1_gsm_signal >> $file_curle");
 
-open(my $in, "<", $file_curle)                             
-    or die "Не могу открыть файл на чтение";
-        my @array = <$in>;                                  
+open(my $in, "<", $file_curle) or die "Не могу открыть файл на чтение";
+    my @array = <$in>;                                  
 close($in);                                                 
 
-open(my $out, ">", $file_curle)                             
-    or die "Не могу открыть файл на запись";
-        foreach my $x (@array) {                            
-            $x =~ s/\s//g;                                  
-            $x =~ s/&nbsp;//g;                                 
+open(my $out, ">", $file_curle) or die "Не могу открыть файл на запись";
+    foreach my $x (@array) {                            
+        $x =~ s/\s//g;                                  
+        $x =~ s/&nbsp;//g;                                 
         print $out $x;                                     
     }
 close($out);                                               
