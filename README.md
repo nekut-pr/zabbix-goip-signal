@@ -5,7 +5,7 @@
 
 > perl -MCPAN -e 'install HTML::Parser'
 
-Этой ссылкой вы указываете куда будет сохраняться html код строницы Status->Summary с GoIP
+Этой ссылкой вы указываете куда будет сохраняться html код строницы **Status->Summary** с GoIP
  ```perl 
  my $file_curle = "/usr/scripts/go-ip/curl.html";
  ```
@@ -13,4 +13,11 @@
  ```perl 
  my $file_output = "/usr/scripts/go-ip/output.txt"; 
  ```
- 
+ ____
+Добавляем файл в cron 
+
+> nano /etc/crontab 
+
+```*/5 *    * * *   root    perl /usr/scripts/go-ip/go-ip.pl```
+Прегружаем cron
+> /etc/init.d/cron restart
