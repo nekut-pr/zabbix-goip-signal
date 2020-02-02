@@ -6,11 +6,11 @@
 ```
 perl -MCPAN -e 'install HTML::Parser'
 ```
-
-l1_gsm_signal это номер канала с которого вы хотите снимать показания 
-
+**l1_gsm_signal** это номер канала с которого вы хотите снимать показания 
+```perl 
 system("curl -s -u admin:admin 'http://ip_address_go-ip/default/en_US/status.html' | grep l1_gsm_signal >> $file_curle");
 
+```
 Этой ссылкой вы указываете куда будет сохраняться html код строницы **Status->Summary** с GoIP
 ```perl 
 my $file_curle = "/usr/scripts/go-ip/curl.html";
@@ -39,22 +39,25 @@ nano /etc/crontab
 perl /usr/scripts/go-ip/go-ip.pl
 cat /usr/scripts/go-ip/output.txt
 ```
-
+____
 Zabbix
+-----------
 
 создаем файл
+```
+/etc/zabbix/zabbix_agentd.d/userparameter_asterisk.conf
+```
+####вводим
 
-/etc/zabbix/zabbix_agentd.d/userparameter_asterisk.conf  
-вводим
+```UserParameter=signal,cat /usr/scripts/go-ip/output.txt```
+####выходим
 
-UserParameter=signal,cat /usr/scripts/go-ip/output.txt
-выходим
-Перегружаем Zabbix агента
+###Перегружаем Zabbix агента
 
-/etc/init.d/zabbix-agent restart
+```/etc/init.d/zabbix-agent restart```
 
 
-Переходим в zabbix
+###Переходим в zabbix
 
 Настройки->Узлы сети->Zabbix Server
 Элементы данных->Создать элемент данных
