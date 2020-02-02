@@ -14,9 +14,9 @@
  my $file_output = "/usr/scripts/go-ip/output.txt"; 
  ```
  ____
-Добавляем файл в cron 
+Открываем файл в crontab на дерактирование 
 
-> nano /etc/crontab 
+```nano /etc/crontab ```
 
 ```*/5 *    * * *   root    perl /usr/scripts/go-ip/go-ip.pl```
 Прегружаем cron
