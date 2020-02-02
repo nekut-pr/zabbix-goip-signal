@@ -3,7 +3,7 @@
 
 Для начала нужно установить модуль **HTML::Parser**.
 
-> perl -MCPAN -e 'install HTML::Parser'
+```perl -MCPAN -e 'install HTML::Parser' ```
 
 Этой ссылкой вы указываете куда будет сохраняться html код строницы **Status->Summary** с GoIP
  ```perl 
