@@ -3,6 +3,6 @@
 
 Для начала нужно установить модуль **HTML::Parser**.
 
-console# perl -MCPAN -e shell
+ ____perl -MCPAN -e shell
 
-cpan[1]> install HTML::Parser
+____install HTML::Parser
