@@ -10,5 +10,7 @@
  
  
  Этой ссылкой вы указываете куда сохранять уровень сигнала с формат txt
- ```perl my $file_output = "/usr/scripts/go-ip/output.txt"; ```
+ ```perl 
+ my $file_output = "/usr/scripts/go-ip/output.txt"; 
+ ```
  
