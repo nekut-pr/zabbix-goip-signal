@@ -35,3 +35,23 @@ nano /etc/crontab
 perl /usr/scripts/go-ip/go-ip.pl
 cat /usr/scripts/go-ip/output.txt
 ```
+
+Zabbix
+
+создаем файл
+
+/etc/zabbix/zabbix_agentd.d/userparameter_asterisk.conf  
+вводим
+
+UserParameter=signal,cat /usr/scripts/go-ip/output.txt
+
+/etc/init.d/zabbix-agent restart
+
+
+Переходим в zabbix
+Настройки->Узлы сети->Zabbix Server
+Элементы данных->Создать элемент данных
+
+Имя Уровень сигнала MTS
+Тип Zabbix агент
+Ключ signal.mts
