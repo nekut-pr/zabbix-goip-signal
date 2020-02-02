@@ -3,5 +3,5 @@
 
 Для начала нужно установить модуль **HTML::Parser**.
 
-perl -MCPAN -e shell
-install HTML::Parser
+> perl -MCPAN -e 'install HTML::Parser'
+
