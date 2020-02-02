@@ -4,8 +4,8 @@ use strict;
 use warnings;
 use HTML::Parser;
 
-my $file_curle = "путь к файлу для сохранения выхлопа сurl";
-my $file_output = "путь к файлу для хранения цифры уровня сигнала";
+my $file_curle = "/usr/scripts/go-ip/curl.html";
+my $file_output = "/usr/scripts/go-ip/output.txt";
 
 system("curl -s -u admin:admin 'http://ip_address_go-ip/default/en_US/status.html' | grep l1_gsm_signal >> $file_curle");
 
