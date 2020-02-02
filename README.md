@@ -13,7 +13,7 @@ my $file_curle = "/usr/scripts/go-ip/curl.html";
 ```
 Этой ссылкой вы указываете куда сохранять уровень сигнала с формат txt
 ```perl 
-my $file_output = "ссылка на файл"; 
+my $file_output = "/usr/scripts/go-ip/output.txt"; 
 ```
 ____
 Запуск файла
@@ -29,4 +29,9 @@ nano /etc/crontab
 Перегружаем cron
 ```
 /etc/init.d/cron restart 
+```
+Проверка
+```
+perl /usr/scripts/go-ip/go-ip.pl
+cat /usr/scripts/go-ip/output.txt
 ```
