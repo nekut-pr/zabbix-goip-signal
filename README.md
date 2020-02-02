@@ -47,17 +47,17 @@ Zabbix
 ```
 /etc/zabbix/zabbix_agentd.d/userparameter_asterisk.conf
 ```
-####вводим
+#### вводим
 
 ```UserParameter=signal,cat /usr/scripts/go-ip/output.txt```
-####выходим
+#### выходим
 
-###Перегружаем Zabbix агента
+### Перегружаем Zabbix агента
 
 ```/etc/init.d/zabbix-agent restart```
 
 
-###Переходим в zabbix
+### Переходим в zabbix
 
 Настройки->Узлы сети->Zabbix Server
 Элементы данных->Создать элемент данных
