@@ -7,6 +7,10 @@
 perl -MCPAN -e 'install HTML::Parser'
 ```
 
+l1_gsm_signal это номер канала с которого вы хотите снимать показания 
+
+system("curl -s -u admin:admin 'http://ip_address_go-ip/default/en_US/status.html' | grep l1_gsm_signal >> $file_curle");
+
 Этой ссылкой вы указываете куда будет сохраняться html код строницы **Status->Summary** с GoIP
 ```perl 
 my $file_curle = "/usr/scripts/go-ip/curl.html";
@@ -44,14 +48,25 @@ Zabbix
 вводим
 
 UserParameter=signal,cat /usr/scripts/go-ip/output.txt
+выходим
+Перегружаем Zabbix агента
 
 /etc/init.d/zabbix-agent restart
 
 
 Переходим в zabbix
+
 Настройки->Узлы сети->Zabbix Server
 Элементы данных->Создать элемент данных
 
-Имя Уровень сигнала MTS
+Имя Уровень сигнала 
 Тип Zabbix агент
 Ключ signal.mts
+
+
+
+Инстукцию по созданию графиков вы можете посмотреть тут
+https://www.zabbix.com/documentation/3.0/ru/manual/config/visualisation/graphs/custom
+
+И вот ваш мониторинг уровня сигнала готов
+![Alt-текст](https://i.ibb.co/gghZ51Q/zabbix.png)
