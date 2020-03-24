@@ -22,7 +22,7 @@ my $file_output = "/usr/scripts/go-ip/output.txt";
 ____
 Запуск файла
 -----------
-#### Открываем файл в crontab на дерактирование 
+#### Открываем файл crontab на дерактирование 
 ```
 nano /etc/crontab
 ```
